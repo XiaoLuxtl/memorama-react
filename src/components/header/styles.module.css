@@ -1,0 +1,6 @@
+.gheader {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 3rem;
+}
