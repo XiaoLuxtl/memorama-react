@@ -1,30 +1,33 @@
+import { GameLogicContext } from '../../utils/gamelogic'
 import styles from './styles.module.css'
 import { useContext } from 'react'
-import { RestartContext } from '../../utils/gamerestart'
 
 export default function Header () {
-  const { setRestart } = useContext(RestartContext)
+  const { restart, setRestart, tries } = useContext(GameLogicContext)
 
   function handleClick () {
-    setRestart((restart) => !restart)
+    setRestart(!restart)
   }
 
   return (
     <header className={styles.gheader}>
-      <div>
-        <h1>
-          Memorama
-        </h1>
-        <button onClick={handleClick}>
-          Reiniciar
-        </button>
+
+      <h1>
+        Memorama
+      </h1>
+      <div className={styles.gheaderlogic}>
+        <div>
+          <button onClick={handleClick}>
+            Reiniciar
+          </button>
+        </div>
+        <div>
+          <h4>
+            Intentos: {tries}
+          </h4>
+        </div>
       </div>
 
-      {/* <div>
-        <h4>
-          Intentos:
-        </h4>
-      </div> */}
     </header>
   )
 }
