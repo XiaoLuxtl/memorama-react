@@ -8,7 +8,7 @@ const CARITAS = [
   '🐴', '🦄', '🐔', '🐲'
 ]
 
-export default function crearbaraja (nCartas = 5) {
+export default function crearbaraja ({ nCartas = 5 }) {
   const cartas = []
 
   if (nCartas > CARITAS.length - 1) nCartas = CARITAS.length - 1
