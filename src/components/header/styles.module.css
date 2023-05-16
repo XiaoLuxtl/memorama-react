@@ -1,6 +1,12 @@
 .gheader {
-  display: flex;
   justify-content: center;
   align-items: baseline;
+  margin-bottom: 3rem;
+}
+
+.gheaderlogic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 3rem;
 }
